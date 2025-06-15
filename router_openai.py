@@ -10,7 +10,7 @@ def ask_openrouter(prompt: str):
         "Content-Type": "application/json"
     }
     body = {
-        "model": "openrouter/openchat",  # or "mistralai/mistral-7b"
+        "model": "deepseek/deepseek-r1-0528:free",  # or "mistralai/mistral-7b"
         "messages": [{"role": "user", "content": prompt}]
     }
     res = requests.post("https://openrouter.ai/api/v1/chat/completions", json=body, headers=headers)
